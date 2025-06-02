@@ -11,6 +11,10 @@ This is a beginner-friendly Python script that captures and analyzes IP packets 
 
 - Displays readable payload data (if available)
 
+- Saves readable payload data to packets_payload.txt.
+
+- Stores all captured packets in .pcap format (captured_packets.pcap) for analysis in tools like Wireshark.
+
 📦 Requirements
 Python 3.6+
 Scapy
@@ -41,6 +45,20 @@ Run the script:
 python "Packet sniffer.py"
 ⚠️ Run your terminal as Administrator if you’re on Windows. Scapy needs permission to sniff packets.
 
+
+✨ Features
+- Filters only IP packets.
+
+- Identifies protocols: TCP, UDP, ICMP.
+
+- Decodes and saves payloads to a readable .txt file.
+
+- Saves full packet data to a .pcap file after capture (e.g. when stopped or on count complete).
+
+📁 Output Files
+- packets_payload.txt → Human-readable payload data (decoded UTF-8 where possible).
+
+- captured_packets.pcap → Raw packet capture for Wireshark or advanced analysis.
 
 💡 Notes
 You can modify the filter="ip" to capture other protocols like "tcp" or "icmp".
