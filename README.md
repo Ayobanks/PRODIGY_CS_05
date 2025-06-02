@@ -51,7 +51,20 @@ python "Packet sniffer.py"
 
 - Decodes and saves payloads to a readable .txt file.
 
-- Saves full packet data to a .pcap file after capture (e.g. when stopped or on count complete).
+- Saves full packet data to a .pcap file after capture (e.g. when stopped or on count complete
+
+⚙️ Customization
+You can control the capture session by editing the sniff() line in the script:
+
+- count=10 → Stop after capturing 10 packets.
+
+- timeout=30 → Stop after 30 seconds.
+
+- Omit both to capture until manually interrupted (CTRL + C).
+
+Example:
+
+sniff(filter="ip", prn=process_packet, store=False, timeout=30)
 
 📁 Output Files
 - packets_payload.txt → Human-readable payload data (decoded UTF-8 where possible).
