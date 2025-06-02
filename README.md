@@ -3,11 +3,9 @@
 This is a beginner-friendly Python script that captures and analyzes IP packets on a network using the Scapy library.
 
 🧠 Features
-- Captures IP packets (TCP, UDP, ICMP)
+- Detects & Captures IP packets (TCP, UDP, ICMP)
 
 - Shows source and destination IP addresses
-
-- Detects protocol used (TCP, UDP, ICMP)
 
 - Displays readable payload data (if available)
 
